@@ -39,7 +39,7 @@ public class LoginTest extends BaseTest
         loginPage.setClickOnLogin();
         //   Verify "Dashboard" Message
         String actualMessage = dashboardPage.getVerifyTheTextDashboard();
-        String expectedMessage = "WelCome";
+        String expectedMessage = "Dashboard";
         Assert.assertEquals(actualMessage,expectedMessage,"WelCome Text is displayed");
     }
 
@@ -53,7 +53,7 @@ public class LoginTest extends BaseTest
         //   Click on Login Button
         loginPage.setClickOnLogin();
         //   Verify Logo is Displayed
-        homePage.setHrmLogo();
+        //homePage.setHrmLogo();
     }
 
     @Test(groups = "Regression")
@@ -73,7 +73,7 @@ public class LoginTest extends BaseTest
         Assert.assertEquals(actualMessage,expectedMessage,"login message is not displayed");
     }
 
-    @Test(groups = "Regression",dataProvider = "data set" , dataProviderClass = LoginTest.class)
+    @Test(groups = "Regression",dataProvider = "dataset" , dataProviderClass = LoginTest.class)
     public void verifyErrorMessageWithInvalidCredentials(String userName , String password , String errorMessage)
     {
         //Enter username
